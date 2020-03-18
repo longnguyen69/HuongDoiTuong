@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Rectangle {
+        constructor(cd, cr) {
+            this.chieuDai = cd;
+            this.chieuRong = cr;
+        }
+
+        CheckSandV() {
+            this.dienTich = this.chieuDai * this.chieuRong;
+            this.chuVi = (this.chieuDai + this.chieuRong) * 2;
+        }
+    }
+
+    let hcn = new Rectangle(50,30);
+    alert("dien tich HCN: " + hcn.dienTich + " va chu vi la: " + hcn.chuVi);
+</script>
+</body>
+</html>

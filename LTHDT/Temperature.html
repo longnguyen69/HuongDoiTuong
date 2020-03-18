@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class  Temperature{
+        constructor(c) {
+            this.doC = c;
+        }
+        examination(){
+            if(this.doC > -273){
+                this.doF = (this.doC *1.8)+32;
+            } else {alert("ban nhap sai nhiet do!!!")}
+            if (this.doC > -273){
+                this.doK = this.doC + 273;
+            }
+        }
+    }
+
+    let change = new Temperature(58);
+    console.log("do F: " + change.doF);
+    console.log("do K: " + change.doK);
+</script>
+</body>
+</html>
