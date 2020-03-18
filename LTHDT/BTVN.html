@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    table {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    tr, td {
+        border: 1px solid black;
+
+    }
+</style>
+<body>
+<table id="mTable">
+
+</table>
+<script>
+    /**
+     1,tạo lớp student cho các sinh viên
+     2,tạo danh sách các đối tượng cho sinh viên
+     3, hiển thị danh sách sinh viên
+     4, sắp xếp theo chiều tăng dần của điểm trung bình
+     */
+    class Students {
+        constructor(studentID, firstName, lastName, className, mathScore, phyScore, cheScore) {
+            this.studentID = studentID;
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.className = className;
+            this.mathScore = mathScore;
+            this.phyScore = phyScore;
+            this.cheScore = cheScore;
+        }
+
+      /*  objProperties() {
+            const MAX = 10;
+            for (let i = 0; i < MAX; i++) {
+                this.studentID = "CG" + i;
+                this.firstName = Math.random().toString(36).substring(10);
+                this.lastName = Math.random().toString(36).substring(5);
+                this.className = "c0220" + Math.random().toString(36).substring(2);
+                this.mathScore = Math.floor(Math.random() * 10);
+                this.phyScore = Math.floor(Math.random() * 10);
+                this.cheScore = Math.floor(Math.random() * 10);
+            }
+        } */
+    }
+
+    function showListStudents() {
+        let str = '';
+        const MAX = 10;
+        for (let i = 0; i < MAX; i++) {
+            let studentsList = [];
+            str += "<tr>";
+            str += `<td id="ID${i}">`;
+            this.studentID = "CG" + i;
+            str += "</td>";
+            str += `<td id="firstName${i}">`;
+            this.firstName = Math.random().toString(36).substring(10);
+            str += "</td>";
+            str += `<td id="lastName${i}">`;
+            this.lastName = Math.random().toString(36).substring(5);
+            str += "</td>";
+            str += `<td id="className${i}">`;
+            this.className = "c0220" + Math.random().toString(36).substring(2);
+            str += "</td>";
+            str += `<td id="mathScore${i}">`;
+            this.mathScore = Math.floor(Math.random() * 10);
+            str += "</td>";
+            str += `<td id="phyScore${i}">`;
+            this.phyScore = Math.floor(Math.random() * 10);
+            str += "</td>";
+            str += `<td id="cheScore${i}">`;
+            this.cheScore = Math.floor(Math.random() * 10);
+            str += "</td>";
+            str += "</tr>";
+            studentsList.push(this.studentID, this.firstName, this.lastName, this.className, this.mathScore, this.phyScore, this.cheScore);
+            document.getElementById("mTable").innerHTML = str;
+        }
+    }
+        let student = Students();
+        showListStudents();
+</script>
+</body>
+</html>
