@@ -37,7 +37,39 @@
             this.cheScore = cheScore;
         }
 
-      /*  objProperties() {
+       objProperties() {
+           let str = '';
+           const MAX = 10;
+           for (let i = 0; i < MAX; i++) {
+               str += "<tr>";
+               str += `<td id="ID${i}">`;
+               `${this.studentID}`;
+               str += "</td>";
+               str += `<td id="firstName${i}">`;
+              ` ${this.firstName};`
+               str += "</td>";
+               str += `<td id="lastName${i}">`;
+               `${this.lastName}`;
+               str += "</td>";
+               str += `<td id="className${i}">`;
+               `${this.className}`;
+               str += "</td>";
+               str += `<td id="mathScore${i}">`;
+               `${this.mathScore}`;
+               str += "</td>";
+               str += `<td id="phyScore${i}">`;
+               `${this.phyScore}`;
+               str += "</td>";
+               str += `<td id="cheScore${i}">`;
+               `${this.cheScore}`;
+               str += "</td>";
+               str += "</tr>";
+
+               document.getElementById("mTable").innerHTML = str;
+            }
+    }
+
+    function showListStudents() {
             const MAX = 10;
             for (let i = 0; i < MAX; i++) {
                 this.studentID = "CG" + i;
@@ -47,44 +79,9 @@
                 this.mathScore = Math.floor(Math.random() * 10);
                 this.phyScore = Math.floor(Math.random() * 10);
                 this.cheScore = Math.floor(Math.random() * 10);
-            }
-        } */
-    }
-
-    function showListStudents() {
-        let str = '';
-        const MAX = 10;
-        for (let i = 0; i < MAX; i++) {
-            let studentsList = [];
-            str += "<tr>";
-            str += `<td id="ID${i}">`;
-            this.studentID = "CG" + i;
-            str += "</td>";
-            str += `<td id="firstName${i}">`;
-            this.firstName = Math.random().toString(36).substring(10);
-            str += "</td>";
-            str += `<td id="lastName${i}">`;
-            this.lastName = Math.random().toString(36).substring(5);
-            str += "</td>";
-            str += `<td id="className${i}">`;
-            this.className = "c0220" + Math.random().toString(36).substring(2);
-            str += "</td>";
-            str += `<td id="mathScore${i}">`;
-            this.mathScore = Math.floor(Math.random() * 10);
-            str += "</td>";
-            str += `<td id="phyScore${i}">`;
-            this.phyScore = Math.floor(Math.random() * 10);
-            str += "</td>";
-            str += `<td id="cheScore${i}">`;
-            this.cheScore = Math.floor(Math.random() * 10);
-            str += "</td>";
-            str += "</tr>";
-            studentsList.push(this.studentID, this.firstName, this.lastName, this.className, this.mathScore, this.phyScore, this.cheScore);
-            document.getElementById("mTable").innerHTML = str;
         }
     }
-        let student = Students();
-        showListStudents();
+
 </script>
 </body>
 </html>
