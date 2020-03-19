@@ -72,6 +72,7 @@
 
     function showListStudents() {
             const MAX = 10;
+            let studentLit = [];
             for (let i = 0; i < MAX; i++) {
                 this.studentID = "CG" + i;
                 this.firstName = Math.random().toString(36).substring(10);
@@ -80,6 +81,8 @@
                 this.mathScore = Math.floor(Math.random() * 10);
                 this.phyScore = Math.floor(Math.random() * 10);
                 this.cheScore = Math.floor(Math.random() * 10);
+                let sv = new Students(this.studentID, this.firstName, this.lastName, this.className, this.mathScore, this.phyScore, this.cheScore;
+                studentLit[i] = sv;
         }
     }
 
